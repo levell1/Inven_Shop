@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   Name: Shoes
-  info: "\uC2E0\uBC1C\uC785\uB2C8\uB2E4."
+  info: "\uCC9C\uC73C\uB85C \uB9CC\uB4E4\uC5B4\uC9C4 \uC2E0\uBC1C \uC785\uB2C8\uB2E4."
   ItemGold: 800
   IsEquip: 0
+  sprite: {fileID: 0}
   ItemDef: 7

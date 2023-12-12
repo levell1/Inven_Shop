@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerInven
@@ -9,7 +8,6 @@ public class PlayerInven
     {
         items.Add(Item);
     }
-
     public void RemoveItem(Item item)
     {
         items.Remove(item); 

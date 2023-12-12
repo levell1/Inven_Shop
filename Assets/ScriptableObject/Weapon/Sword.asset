@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   Name: Sword
-  info: "\uAE34\uAC80"
+  info: "\uC1E0\uB85C \uB9CC\uB4E4\uC5B4\uC9C4 \uAC80\uC785\uB2C8\uB2E4."
   ItemGold: 100
-  IsEquip: 1
+  IsEquip: 0
+  sprite: {fileID: 0}
   ItemAttack: 10

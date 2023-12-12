@@ -1,4 +1,3 @@
-
 public class GoldManager
 {
     public string AbbreviateGold(int goldAmount)

@@ -9,7 +9,8 @@ public class InvenAddItem : MonoBehaviour
     public Armor Helmet;
     public Armor Shoes;
     public Armor Belt;
-    void Start()
+
+    void Awake()
     {
         Sword.IsEquip = false;
         Ring.IsEquip = false;
