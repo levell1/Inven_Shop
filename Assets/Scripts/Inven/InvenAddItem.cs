@@ -10,6 +10,7 @@ public class InvenAddItem : MonoBehaviour
     public Armor Shoes;
     public Armor Belt;
 
+
     void Awake()
     {
         Sword.IsEquip = false;
@@ -23,5 +24,10 @@ public class InvenAddItem : MonoBehaviour
         playerInven.AddItem(Helmet); 
         playerInven.AddItem(Shoes); 
         playerInven.AddItem(Belt); 
+    }
+
+    public int InvenCount() 
+    {
+        return playerInven.items.Count;
     }
 }

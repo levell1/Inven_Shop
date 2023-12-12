@@ -20,6 +20,9 @@ public class UiManager : MonoBehaviour
     public TMP_Text HP;
     public TMP_Text Cri;
 
+    public InvenAddItem Inventory;
+    public TMP_Text InvenCountTxt;
+
     public CharacterStat playerstats;
 
     void Start()
@@ -27,6 +30,7 @@ public class UiManager : MonoBehaviour
         playerstats = player.playerstats;
         StatView();
         FirstViewInit();
+        InvenCountView();
     }
 
     public void StatView()
@@ -41,10 +45,15 @@ public class UiManager : MonoBehaviour
     {
         Job.text = playerstats.Job;
         Id.text = playerstats.Id;
-        Level.text = "LV . " + playerstats.Level;
+        Level.text = "LV. " + playerstats.Level;
         string gold = goldManager.AbbreviateGold(playerstats.Gold);
         Gold.text = gold;
         ExpBar.value = playerstats.Exp / playerstats.MaxExp;
         Exp.text = playerstats.Exp + " / " + playerstats.MaxExp;
+    }
+
+    public void InvenCountView() 
+    {
+        InvenCountTxt.text = Inventory.InvenCount().ToString();
     }
 }
