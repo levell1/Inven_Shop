@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InvenAddItem : MonoBehaviour
@@ -13,17 +11,16 @@ public class InvenAddItem : MonoBehaviour
     public Armor Belt;
     void Start()
     {
-        // 인벤토리에 무기와 방어구 추가
+        Sword.IsEquip = false;
+        Ring.IsEquip = false;
+        Helmet.IsEquip = false;
+        Shoes.IsEquip = false;
+        Belt.IsEquip = false;
+
         playerInven.AddItem(Sword); 
         playerInven.AddItem(Ring); 
         playerInven.AddItem(Helmet); 
         playerInven.AddItem(Shoes); 
         playerInven.AddItem(Belt); 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

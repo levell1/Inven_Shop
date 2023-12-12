@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class GoldManager
 {
@@ -21,6 +18,5 @@ public class GoldManager
             return sum;
         }
         return goldAmount.ToString();
-
     }
 }

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public enum ItemType
 {
@@ -18,4 +15,5 @@ public class Item : ScriptableObject
     public string info;
     public int ItemGold;
     public bool IsEquip = false;
+    public Sprite sprite;
 }

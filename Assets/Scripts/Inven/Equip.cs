@@ -1,29 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class Equip : MonoBehaviour
 {
     public InvenAddItem Inven;
     public Player player;
     public GameObject popup;
+
     public Image PopupImage;
-    public TMP_Text Exp;
+
+    public TMP_Text Name;
+    public TMP_Text Info;
+    public TMP_Text ATKorDef;
+    public TMP_Text Itemstat;
 
     GameObject Clickobject;
     Image image;
+    Sprite selectimage;
     Weapon weapon;
     Armor armor;
     Item selectItem;
 
-    private void Awake()
-    {
-
-    }
     // 장비를 장착하는 함수
     public void Equipa(Item item, Image image)
     {
@@ -48,26 +47,16 @@ public class Equip : MonoBehaviour
     {
         item.IsEquip = false;
     }
-    public void EquipButton() 
-    {
-        Clickobject = EventSystem.current.currentSelectedGameObject;
-        image = Clickobject.GetComponent<Image>();
-        
-        foreach (var item in Inven.playerInven.items)
-        {
-            if (Clickobject.name == item.name) 
-            {
-                selectItem = item;
-                //Equipa(item, image);
-            }
-        }
-    }
 
     public void popupView()
     {
         Clickobject = EventSystem.current.currentSelectedGameObject;
         image = Clickobject.GetComponent<Image>();
+        selectimage = image.transform.GetChild(0).GetComponent<Image>().sprite;
 
+        //selectimage = image.GetComponentsInChildren<Image>()[0];
+        /*selectimage = image.GetComponentsInChildren<Image>()[1];
+        selectimage = image.GetComponentsInChildren<Image>()[2];*/
         foreach (var item in Inven.playerInven.items)
         {
             if (Clickobject.name == item.name)
@@ -77,8 +66,28 @@ public class Equip : MonoBehaviour
         }
         popup.SetActive(true);
         
-        //image 세팅, 글자 세팅
-        //popupConfirm(Clickobject, selectItem, image);
+        PopUpreset(selectItem);
+
+    }
+
+    public void PopUpreset(Item selectItem)
+    {
+        PopupImage.sprite = selectimage;
+        Name.text = selectItem.name;
+        Info.text = selectItem.info;
+
+        if (selectItem.type == ItemType.Weapon)
+        {
+            weapon = selectItem as Weapon;
+            ATKorDef.text = "공격력";
+            Itemstat.text = weapon.ItemAttack.ToString();
+        }
+        else if(selectItem.type == ItemType.Armor)
+        {
+            armor = selectItem as Armor;
+            ATKorDef.text = "방어력";
+            Itemstat.text = armor.ItemDef.ToString();
+        }
     }
 
     public void popupConfirm() 
@@ -86,7 +95,6 @@ public class Equip : MonoBehaviour
         Equipa(selectItem, image);
         popup.SetActive(false);
     }
-
 
     public void statUpdate(Item item) 
     {
@@ -114,7 +122,5 @@ public class Equip : MonoBehaviour
                 player.player.Def -= armor.ItemDef;
             }
         }
-
     }
-
 }
