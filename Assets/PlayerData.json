@@ -1,0 +1,12 @@
+{
+  "Id": "Kim",
+  "Job": "Knight",
+  "Level": 5,
+  "Gold": 21300,
+  "Exp": 100,
+  "MaxExp": 500,
+  "Attack": 10,
+  "Def": 5,
+  "HP": 100,
+  "Cri": 10
+}
