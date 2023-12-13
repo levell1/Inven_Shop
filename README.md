@@ -6,8 +6,6 @@
 
 <BR><BR>
 
-- 필수요구사항
-
 
 # 계획
 발제를 보고 상점까지를 목표로 대략적인 스크립트와 UI를 만들며 진행 하였습니다.  
@@ -114,7 +112,7 @@ status 클릭시 스텟 보기, 내용수정
 
 ![image](https://github.com/levell1/levell1.github.io/assets/96651722/8da9245b-49f1-4ca4-b54a-88193ddc16c0)  
 
-[UImanager]()
+[UImanager](https://github.com/levell1/Inven_Shop?tab=readme-ov-file#managersuimoneybuttonclick)
 
 <br><br>
 
@@ -196,10 +194,10 @@ public class InvenAddItem : MonoBehaviour
 </div>
 </details>
 
-****
+
 
 <br><br><br><br><br>
-- - - 
+
 
 # 2. 선택요구사항
 
@@ -615,7 +613,7 @@ public class GoldManager
 </details>
 
 <br><br><br><br><br>
-- - - 
+
 
 
 # 느낀점
@@ -629,7 +627,7 @@ public class GoldManager
 > - 이번과제에 대한 부족한점 에 대하여 알고싶습니다.
 
 
-**감사합니다.**
+**봐주셔서 감사합니다.**
 
 
 
