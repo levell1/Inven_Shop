@@ -25,6 +25,7 @@
 > 1. 아이템 장착 팝업 업그레이드 
 
 
+
 <br><br>
 
 # 1. 필수요구사항
@@ -295,7 +296,7 @@ public class Popup : MonoBehaviour
 </div>
 </details>
 
-<br>
+<br><BR>
 
 <details>
 <summary>Equip.cs</summary>
@@ -372,7 +373,7 @@ public class Equip : MonoBehaviour
 </div>
 </details>
 
-<br><br>
+<br><br><br><br><br><br><BR>
 
 # 3. manager, item
 
@@ -432,7 +433,6 @@ public class Weapon : Item
 <br><br>
 
 ## Managers(UI,MONEY,BUTTONCLICK)
-
 
 **UI**  
 첫화면 초기화
@@ -582,7 +582,7 @@ public class ButtonClickManager : MonoBehaviour
 ![image](https://github.com/levell1/levell1.github.io/assets/96651722/e010a01e-776b-454e-8457-d10726664982)  
 
 <details>
-<summary>ButtonClickManager</summary>
+<summary>GoldManager</summary>
 
 <div class="notice--primary" markdown="1"> 
 
@@ -614,7 +614,11 @@ public class GoldManager
 
 <br><br><br><br><br>
 
+# Play
 
+![20231213_182652](https://github.com/levell1/levell1.github.io/assets/96651722/ef27966d-01fe-428f-bfb3-8328af3f1a1b)  
+
+<br><br>
 
 # 느낀점
 
@@ -626,7 +630,6 @@ Inven 부분의 UI 도 다 만들고나서 Scoll View 가 있다는 것을 알�
 > - Script를 나누는게 잘 되고 있는건지?
 > - json, SO 의 데이터구조, 방식이 잘 되고 있는건지?
 > - 이번과제에 대한 아쉬운점, 더 좋은방법 에 대하여 알고싶습니다.
-
 
 **봐주셔서 감사합니다.**
 
